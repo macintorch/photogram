@@ -44,6 +44,7 @@ class PostsController < ApplicationController
 		else
 			flash.now[:alert] = "Delete failed."
 			render :edit
+		end
 	end
 
 	private
