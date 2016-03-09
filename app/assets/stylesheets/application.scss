@@ -55,6 +55,16 @@ html {
   border: none;
 }
 
+.login-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: url("https://s3-ap-southeast-1.amazonaws.com/ainor-photogram/sign_up/happiness.jpg");
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .panel {
   border-radius: 8px;
 }
