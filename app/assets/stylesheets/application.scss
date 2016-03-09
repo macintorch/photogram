@@ -14,6 +14,57 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.navbar {
+  margin-bottom: 0px;
+}
+
+.alert {
+  margin-bottom: 0px;
+}
+
+.error_notification {
+  margin: 0px;
+  background-color: red;
+}
+.error {
+  clear: left;
+    font-color: red;
+    display: block;
+    margin: 0px;
+  }
+
+
+html {  
+  height: 100%;
+}
+
+.registration-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: url("https://s3-ap-southeast-1.amazonaws.com/ainor-photogram/sign_up/happiness.jpg");
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border: none;
+}
+
+.panel {
+  border-radius: 8px;
+}
+
+.panel-heading{
+  h1 {
+    text-align: center;
+  }
+}
+
 body {  
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
