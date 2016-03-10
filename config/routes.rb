@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'posts#index'
+   get ':user_name', to 'profiles#show', as: :profile
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

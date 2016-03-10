@@ -14,6 +14,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.comments {
+  .paginator {
+    margin: 0.5em;
+    .more-comments {
+      color: #A5A7AA;
+    }
+  }
+}
+
 #paginator {
   color: #4090DB;
   height: 120px;
