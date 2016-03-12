@@ -1,162 +1,25 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- */
 @import "bootstrap-sprockets";
-@import "bootstrap";
+ @import "bootstrap";
 
-.profile-header {
-  padding: 20px 0;
+html {  
+  height: 100%;
 }
 
-.profile-image {
-  margin: 20px auto;
-  height: 152px;
-  width: 152px;
-}
-
-.user-name-and-follow {
-  display: inline;
-}
-
-.profile-user-name {
-  display: inline;
-}
-
-.edit-button {
-  border-color: #818488;
-  color: #818488;
-  margin-left: 20px;
-}
-
-.profile-bio {
-  margin-top: 20px;
-}
-
-#user_avatar {
-  margin: 20px auto;
-}
-
-.comments {
-  .paginator {
-    margin: 0.5em;
-    .more-comments {
-      color: #A5A7AA;
-    }
-  }
-}
-
-#paginator {
-  color: #4090DB;
-  height: 120px;
-  width: 120px;
-  margin: 60px auto 40px;
-  position: relative;
-  display: table;
-  border: 2px solid #4090DB;
-  border-radius: 50%;
-  :hover {
-    border: 1px solid #2D6DA8;
-    border-radius: 50%;
-  }
-}
-
-#load_more {
-  display: table-cell;
-  font-size: 12px;
-  padding: 0px 9px;
-  vertical-align: middle;
-  text-decoration: none;
-  a :hover {
-    color: #2D6DA8;
-  }
-}
-
-#image-preview {
-  margin: 0px auto;
-}
-
-#post_image {
-  padding: 1em;
-  margin: 0px auto;
-}
-
-.navbar {
-  margin-bottom: 0px;
+body {  
+  height: 100%;
+  background-color: #fafafa;
+  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 .alert {
   margin-bottom: 0px;
 }
 
-.error_notification {
-  margin: 0px;
-  background-color: red;
-}
-.error {
-  clear: left;
-    font-color: red;
-    display: block;
-    margin: 0px;
-  }
-
-
-html {  
-  height: 100%;
-}
-
-.registration-bg {
-  padding-top: 4em;
-  height: 100%;
-  background-image: url("https://s3-ap-southeast-1.amazonaws.com/ainor-photogram/sign_up/happiness.jpg");
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.log-in{
-  margin-left: auto;
-  margin-right: auto;
-  text-align:center;
-  border: none;
-}
-
-.login-bg {
-  padding-top: 4em;
-  height: 100%;
-  background-image: url("https://s3-ap-southeast-1.amazonaws.com/ainor-photogram/sign_up/happiness.jpg");
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.panel {
-  border-radius: 8px;
-}
-
-.panel-heading{
-  h1 {
-    text-align: center;
-  }
-}
-
-body {  
-  background-color: #fafafa;
-  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-}
-
 /* ## NAVBAR CUSTOMISATIONS ## */
+
+.navbar {
+  margin-bottom: 0px;
+}
 
 .navbar-brand {
   a {
@@ -166,14 +29,13 @@ body {
 
 .navbar-default {
   background-color: #fff;
-  height: 54px;
   .navbar-nav li a {
     color: #125688;
   }
 }
 
 .navbar-container {
-  width: 70%;
+  max-width: 640px;
   margin: 0 auto;
 }
 
@@ -228,7 +90,6 @@ body {
   }
   .user-name {
     font-weight: 500;
-    margin-right: 0.3em;
     color: #125688;
     font-size: 15px;
   }
@@ -247,7 +108,6 @@ body {
     }
   }
   margin-bottom: 7px;
-  padding-top: 24px;
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 10px;
@@ -275,18 +135,148 @@ body {
   justify-content: center;
 }
 
-/* ## Wrapper and styling for the new and edit views ## */
-
-.form-wrapper {
-  width: 60%;
-  margin: 20px auto;
-  background-color: #fff;
-  padding: 40px;
-  border: 1px solid #eeefef;
-  border-radius: 3px;
-}
+/* ## Wrapper and styling for the new, edit & devise views ## */
 
 .edit-links {
   margin-top: 20px;
   margin-bottom: 40px;
+}
+
+.registration-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: url("https://s3-ap-southeast-1.amazonaws.com/ainor-photogram/sign_up/happiness.jpg");
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: url("https://s3-ap-southeast-1.amazonaws.com/ainor-photogram/sign_up/happiness.jpg");
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border: none;
+}
+
+.panel {
+  border-radius: 8px;
+}
+
+.panel-heading{
+  h1 {
+    text-align: center;
+  }
+}
+
+#image-preview {
+  margin: 0 auto;
+}
+
+#post_image {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+
+#paginator {
+  color: #4090DB;
+  height: 120px;
+  width: 120px;
+  margin: 60px auto 40px;
+  position: relative;
+  display: table;
+  border: 2px solid #4090DB;
+  border-radius: 50%;
+  :hover {
+    border: 1px solid #2D6DA8;
+    border-radius: 50%;
+  }
+}
+
+#load_more {
+  display: table-cell;
+  font-size: 12px;
+  padding: 0px 9px;
+  vertical-align: middle;
+  text-decoration: none;
+  a :hover {
+    color: #2D6DA8;
+  }
+}
+
+.comments {
+  .paginator {
+    margin: 0.5em;
+    .more-comments {
+      color: #A5A7AA;
+    }
+  }
+}
+
+.comment-submit-button {
+  position: absolute;
+  left: -9999px;
+}
+
+.profile-header {
+  padding: 20px 0;
+}
+
+.profile-image {
+  margin: 20px auto;
+  height: 152px;
+  width: 152px;
+}
+
+.user-name-and-follow {
+  display: inline;
+}
+
+.profile-user-name {
+  display: inline;
+}
+
+.edit-button {
+  border-color: #818488;
+  color: #818488;
+  margin-left: 20px;
+}
+
+.profile-bio {
+  margin-top: 20px;
+}
+
+#user_bio {
+  border: 1px solid gray;
+}
+
+#user_avatar {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+.likes {
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+
+.like {
+  text-decoration: none;
+  color: red;
+}
+
+.like-button a:hover, a:focus {
+  text-decoration: none;
+  color: red;
 }
