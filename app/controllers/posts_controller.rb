@@ -60,6 +60,10 @@ class PostsController < ApplicationController
 		end
 	end
 
+	def browse  
+	  @posts = Post.all.order('created_at DESC').page params[:page]
+	end  
+
 	private
 
 	def post_params
