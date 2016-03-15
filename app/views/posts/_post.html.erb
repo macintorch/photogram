@@ -34,15 +34,21 @@
         </div>
       </div>
     </div>
-    <div class="comment-like-form row">
-      <div class="col-sm-1 like-button">
-        <%= link_to '', like_post_path(post.id), remote: true, id: "like_#{post.id}", class: "like glyphicon #{liked_post post}" %>
-      </div
-      <div class="comment-form col-sm-11">
-        <%= form_for [post, post.comments.build] do |f| %>
-          <%= f.text_field :content, placeholder: 'Add a comment...', class: "comment_content", id: "comment_content_#{post.id}" %>
-        <% end %>
+      <div class="comment-like-form row">
+        <div class="col-sm-1 like-button">
+          <%= link_to '', like_post_path(post.id), remote: true, id: "like_#{post.id}", class: "like glyphicon #{liked_post post}" %>
+        </div>
+
+        <div class="comment-form col-sm-9">
+          <%= form_for [post, post.comments.build] do |f| %>
+            <%= f.text_field :content, placeholder: 'Add a comment...', class: "comment_content", id: "comment_content_#{post.id}" %>
+          <% end %>
+        </div>
+          <div class="col-sm-2 ">
+            <button type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-shopping-cart"></span> Buy
+            </button>
+          </div>
       </div>
-    </div>
   </div>
 </div>
