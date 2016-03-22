@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'posts#index'
+  
   get 'relationships/follow_user'
 
   get 'relationships/unfollow_user'
@@ -13,7 +16,12 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { registrations: 'registrations' }
 
-  root 'posts#index'
+  resources :posts do
+    resources :comments
+    member do
+      get 'like'
+    end
+  end
 
   get ':user_name', to: 'profiles#show', as: :profile
   get ':user_name/edit', to: 'profiles#edit', as: :edit_profile
@@ -23,10 +31,5 @@ Rails.application.routes.draw do
   post ':user_name/unfollow_user', to: 'relationships#unfollow_user', as: :unfollow_user
   
 
-  resources :posts do
-    resources :comments
-    member do
-      get 'like'
-    end
-  end
+  
 end
