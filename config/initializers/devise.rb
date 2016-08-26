@@ -86,7 +86,7 @@ Devise.setup do |config|
   # requests for sign in and sign up, you need to get a new CSRF token
   # from the server. You can disable this option at your own risk.
   # config.clean_up_csrf_token_on_authentication = true
-
+config.secret_key = 'ea5ac4ae56ea840191a32e17ed8f5deec3eba76aae1020b3c91066aaa94918c110edb4f7d7d274d81c17b2a9221b2eb69e77714857ab768612cdb62f020673d2'
   # ==> Configuration for :database_authenticatable
   # For bcrypt, this is the cost for hashing the password and defaults to 10. If
   # using other encryptors, it sets how many times you want the password re-encrypted.

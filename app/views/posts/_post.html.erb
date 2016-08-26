@@ -40,8 +40,10 @@
         </div>
 
         <div class="comment-form col-sm-9">
-          <%= form_for [post, post.comments.build] do |f| %>
-            <%= f.text_field :content, placeholder: 'Add a comment...', class: "comment_content", id: "comment_content_#{post.id}" %>
+        <% if user_signed_in? %>
+            <%= form_for [post, post.comments.build] do |f| %>
+              <%= f.text_field :content, placeholder: 'Add a comment...', class: "comment_content", id: "comment_content_#{post.id}" %>
+            <% end %>
           <% end %>
         </div>
           <div class="col-sm-2 ">
